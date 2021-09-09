@@ -97,8 +97,15 @@ while True:
             continue
     elif user_msg.lower() == "y":
         user_msg = True
+        mod_msg = False
         user = input("成員名稱: ") or None
-        break
+        txt_log = input("是否輸出聊天紀錄 (Y/N): ")
+        if txt_log.lower() == "n":
+            txt_log = False
+            break
+        elif txt_log.lower() == "y":
+            txt_log = True
+            break
     else:
         continue
 
